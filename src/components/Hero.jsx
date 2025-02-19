@@ -5,7 +5,7 @@ const Hero = () => {
     <section className="hero">
       {/* 🎥 背景動画を追加 */}
       <video autoPlay loop muted playsInline className="hero-video">
-        <source src="/videos/hero-video.mp4" type="video/mp4" />
+        <source src="/react-lp/videos/hero-video.mp4" type="video/mp4" />
         あなたのブラウザは動画タグをサポートしていません。
       </video>
 
