@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1); /* 🔹 透明感のある白 */
+  backdrop-filter: blur(10px); /* 🔹 背景をぼかしてガラス感を出す */
+  border-radius: 15px; /* 🔹 角を少し丸くする */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* 🔹 ほんのり白い境界線 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 🔹 軽い影を追加 */
+  z-index: 1000;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #4c8cdf; /* ホバー時に明るいブルー */
+}

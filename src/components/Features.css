@@ -1,0 +1,88 @@
+.features {
+  text-align: center;
+  padding: 100px 20px;
+  background: url("/public/bg.jpg") no-repeat center center/cover; /* 画像を背景に適用 */
+  position: relative;
+}
+
+.features::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1); /* 黒の半透明オーバーレイ */
+  z-index: 1;
+}
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2; /* オーバーレイの下に隠れないように */
+}
+
+.feature-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1); /* 透明度を持たせてガラス風 */
+  backdrop-filter: blur(10px); /* 背景をぼかす */
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 204, 255, 0.3);
+  flex: 1;
+  min-width: 300px;
+  max-width: 350px;
+  height: 250px; /* 正方形に近づける */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px); /* 少し上に浮かび上がる */
+  box-shadow: 0 0 20px rgba(0, 204, 255, 0.7), 0 0 40px rgba(0, 204, 255, 0.5);
+  border-color: rgba(0, 204, 255, 0.8);
+}
+
+/* 🔥 光るエフェクト（オーバーレイ） */
+.feature-card::before {
+  content: "";
+  position: absolute;
+  background: radial-gradient(
+    circle,
+    rgba(0, 204, 255, 0.3) 10%,
+    rgba(0, 204, 255, 0) 50%
+  );
+  transition: all 0.6s ease-in-out;
+  opacity: 0;
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+  top: 0;
+  left: 0;
+}
+
+h2 {
+  color: white;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
